@@ -27,5 +27,4 @@ public interface BoardJpaRepository extends JpaRepository<Board, Long> {
     @Query("SELECT b FROM Board b JOIN FETCH b.user u WHERE b.id = :id")
     Optional<Board> findByIdJoinUser(@Param("id") Long id); // 인터페이스 추상메서드
 
-
 }
